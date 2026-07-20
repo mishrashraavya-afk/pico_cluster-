@@ -780,7 +780,7 @@ def run_benchmark(sched: str, suite: str, benchmark: str, trials: int,
                   npb_binary: str = "", perf_mode: str = "off", timeout: int = 120,
                   use_rapl: bool = False, use_temperature: bool = False) -> None:
     
-    temp_stop_event = None
+    ''' temp_stop_event = None
     temp_thread = None
 
     if use_temperature:
@@ -798,7 +798,7 @@ def run_benchmark(sched: str, suite: str, benchmark: str, trials: int,
                 trials
             )
     )
-    temp_thread.start()
+    #temp_thread.start() '''
     
 
     # TODO: Start power monitor
