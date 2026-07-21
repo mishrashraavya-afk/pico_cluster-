@@ -367,7 +367,7 @@ def run_sysbench(sched, benchmark, workers, timeout_seconds=120, use_rapl=False,
                             trial,
                             runtime_s=float(real_time),
                             workers=workers,
-                            filename=os.path.join(SCRIPT_DIR, "rapl_sysbench.csv"),
+                            filename=os.path.join(SCRIPT_DIR, "rapl.csv"),
                         )
 
 @dataclass
@@ -456,7 +456,7 @@ def run_wrk(sched, benchmark, workers, timeout_seconds=120, use_rapl=False,trial
                             trial,
                             runtime_s=float(real_time),
                             workers=workers,
-                            filename=os.path.join(SCRIPT_DIR, "rapl_wrk.csv"),
+                            filename=os.path.join(SCRIPT_DIR, "rapl.csv"),
                         )
 
 def run_stressng(sched, stressor, workers, trials=10, timeout_seconds=120, use_rapl=False):
@@ -627,7 +627,7 @@ def run_stressng(sched, stressor, workers, trials=10, timeout_seconds=120, use_r
                 trial,
                 runtime_s=float(real_time),
                 workers=workers,
-                filename=os.path.join(SCRIPT_DIR, "rapl_stressng.csv"),
+                filename=os.path.join(SCRIPT_DIR, "rapl.csv"),
             )
 
         print("\tDone")
