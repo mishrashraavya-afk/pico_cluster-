@@ -263,7 +263,7 @@ class SysbenchOptions:
     file_merged_requests: int = 0
     file_rw_ratio: int = 1
 
-def run_sysbench(sched, benchmark, trials=10):
+def run_sysbench(sched, benchmark, use_rapl=False, trials=10):
     print(f"Running {benchmark} sysbench")
     for trial in range(trials):
         print("trial=", trial)
@@ -359,6 +359,16 @@ def run_sysbench(sched, benchmark, trials=10):
                 seconds_user,
                 seconds_sys
             ])
+            if use_rapl:
+                        append_rapl_metrics(
+                            sched,
+                            "sysbench",
+                            benchmark,
+                            trial,
+                            runtime_s=float(real_time),
+                            workers=workers,
+                            filename=os.path.join(SCRIPT_DIR, "rapl_sysbench.csv"),
+                        )
 
 @dataclass
 class WrkOptions:
@@ -367,7 +377,7 @@ class WrkOptions:
     duration = "90"
     url = "http://localhost"
 
-def run_wrk(sched, benchmark, trials=10):
+def run_wrk(sched, benchmark, use_rapl=False,trials=10):
     fname = f"{CSV_PATH}/wrk.csv"
 
     for trial in range(trials):
@@ -438,6 +448,16 @@ def run_wrk(sched, benchmark, trials=10):
                 seconds_user,
                 seconds_sys
             ])
+            if use_rapl:
+                        append_rapl_metrics(
+                            sched,
+                            "wrk",
+                            benchmark,
+                            trial,
+                            runtime_s=float(real_time),
+                            workers=workers,
+                            filename=os.path.join(SCRIPT_DIR, "rapl_wrk.csv"),
+                        )
 
 def run_stressng(sched, stressor, workers, trials=10, timeout_seconds=120, use_rapl=False):
     """Run stress-ng for a scheduler and append both benchmark and perf metrics to CSV."""
@@ -607,7 +627,7 @@ def run_stressng(sched, stressor, workers, trials=10, timeout_seconds=120, use_r
                 trial,
                 runtime_s=float(real_time),
                 workers=workers,
-                filename=os.path.join(SCRIPT_DIR, "rapl.csv"),
+                filename=os.path.join(SCRIPT_DIR, "rapl_stressng.csv"),
             )
 
         print("\tDone")
