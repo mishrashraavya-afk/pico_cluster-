@@ -263,7 +263,7 @@ class SysbenchOptions:
     file_merged_requests: int = 0
     file_rw_ratio: int = 1
 
-def run_sysbench(sched, benchmark, use_rapl=False, trials=10):
+def run_sysbench(sched, benchmark, workers, timeout_seconds=120, use_rapl=False, trials=10):
     print(f"Running {benchmark} sysbench")
     for trial in range(trials):
         print("trial=", trial)
@@ -377,7 +377,7 @@ class WrkOptions:
     duration = "90"
     url = "http://localhost"
 
-def run_wrk(sched, benchmark, use_rapl=False,trials=10):
+def run_wrk(sched, benchmark, workers, timeout_seconds=120, use_rapl=False,trials=10):
     fname = f"{CSV_PATH}/wrk.csv"
 
     for trial in range(trials):
