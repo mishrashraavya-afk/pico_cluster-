@@ -1,0 +1,88 @@
+
+
+ NAS Parallel Benchmarks 3.4 -- BT Benchmark
+
+ No input file inputbt.data. Using compiled defaults
+ Size:   64x  64x  64  (class A)
+ Iterations:  200    dt:   0.0008000
+ Total number of processes:     4
+
+ Time step    1
+ Time step   20
+ Time step   40
+ Time step   60
+ Time step   80
+ Time step  100
+ Time step  120
+ Time step  140
+ Time step  160
+ Time step  180
+ Time step  200
+ Verification being performed for class A
+ accuracy setting for epsilon =  0.1000000000000E-07
+ Comparison of RMS-norms of residual
+           1 0.1080634671464E+03 0.1080634671464E+03 0.4602664787336E-14
+           2 0.1131973090122E+02 0.1131973090122E+02 0.4707771381408E-15
+           3 0.2597435451158E+02 0.2597435451158E+02 0.1094221972590E-14
+           4 0.2366562254468E+02 0.2366562254468E+02 0.5554487563868E-14
+           5 0.2527896321175E+03 0.2527896321175E+03 0.1326700658051E-13
+ Comparison of RMS-norms of solution error
+           1 0.4234841604053E+01 0.4234841604053E+01 0.8389248078135E-15
+           2 0.4439028249700E+00 0.4439028249700E+00 0.6752834174215E-14
+           3 0.9669248013635E+00 0.9669248013635E+00 0.3214959906465E-14
+           4 0.8830206303977E+00 0.8830206303977E+00 0.5029205372587E-15
+           5 0.9737990177083E+01 0.9737990177083E+01 0.1824151397873E-14
+ Verification Successful
+
+
+ BT Benchmark Completed.
+ Class           =                        A
+ Size            =             64x  64x  64
+ Iterations      =                      200
+ Time in seconds =                    35.93
+ Total processes =                        4
+ Active procs    =                        4
+ Mop/s total     =                  4684.06
+ Mop/s/process   =                  1171.01
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                      3.4
+ Compile date    =              23 Jul 2026
+
+ Compile options:
+    MPIFC        = mpif90
+    FLINK        = $(MPIFC)
+    FMPI_LIB     = (none)
+    FMPI_INC     = (none)
+    FFLAGS       = -O3 -fallow-argument-mismatch
+    FLINKFLAGS   = $(FFLAGS)
+    RAND         = (none)
+
+
+ Please send feedbacks and/or the results of this run to:
+
+ NPB Development Team 
+ Internet: npb@nas.nasa.gov
+
+
+
+
+===== perf (stat) =====
+
+ Performance counter stats for 'mpirun --allow-run-as-root -np 4 /home/picocluster/sip/pico_cluster-/bt.A.x':
+
+        136,466.31 msec task-clock:u                     #    3.754 CPUs utilized             
+                 0      context-switches:u               #    0.000 /sec                      
+                 0      cpu-migrations:u                 #    0.000 /sec                      
+            11,370      page-faults:u                    #   83.317 /sec                      
+   318,982,671,333      cycles:u                         #    2.337 GHz                       
+   281,634,578,198      instructions:u                   #    0.88  insn per cycle            
+    10,021,357,294      branches:u                       #   73.435 M/sec                     
+        35,811,419      branch-misses:u                  #    0.36% of all branches           
+
+      36.355128462 seconds time elapsed
+
+     134.227105000 seconds user
+       2.149137000 seconds sys
+
+
