@@ -1,0 +1,39 @@
+stress-ng: info:  [451845] setting to a 120 second (2 mins, 0.00 secs) run per stressor
+stress-ng: info:  [451845] dispatching hogs: 4 matrix
+stress-ng: metrc: [451845] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [451845]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [451845] matrix          1904476    120.00    469.52      0.68     15870.63        4050.32
+stress-ng: metrc: [451845] miscellaneous metrics:
+stress-ng: metrc: [451845] matrix            258427.31 add matrix ops per sec (geometic mean of 4 instances)
+stress-ng: metrc: [451845] matrix            283134.54 copy matrix ops per sec (geometic mean of 4 instances)
+stress-ng: metrc: [451845] matrix             94728.06 div matrix ops per sec (geometic mean of 4 instances)
+stress-ng: metrc: [451845] matrix             70536.44 frobenius matrix ops per sec (geometic mean of 4 instances)
+stress-ng: metrc: [451845] matrix            251875.69 hadamard matrix ops per sec (geometic mean of 4 instances)
+stress-ng: metrc: [451845] matrix            134620.17 identity matrix ops per sec (geometic mean of 4 instances)
+stress-ng: metrc: [451845] matrix            262541.75 mean matrix ops per sec (geometic mean of 4 instances)
+stress-ng: metrc: [451845] matrix            423956.72 mult matrix ops per sec (geometic mean of 4 instances)
+stress-ng: metrc: [451845] matrix            253262.39 negate matrix ops per sec (geometic mean of 4 instances)
+stress-ng: metrc: [451845] matrix               548.79 prod matrix ops per sec (geometic mean of 4 instances)
+stress-ng: metrc: [451845] matrix            277395.78 sub matrix ops per sec (geometic mean of 4 instances)
+stress-ng: metrc: [451845] matrix               610.64 square matrix ops per sec (geometic mean of 4 instances)
+stress-ng: metrc: [451845] matrix            124547.36 trans matrix ops per sec (geometic mean of 4 instances)
+stress-ng: metrc: [451845] matrix            770173.59 zero matrix ops per sec (geometic mean of 4 instances)
+stress-ng: info:  [451845] successful run completed in 120.00s (2 mins, 0.00 secs)
+
+ Performance counter stats for 'stress-ng --matrix 4 --timeout 120s --metrics-brief':
+
+        470,274.70 msec task-clock                       #    3.918 CPUs utilized             
+            53,467      context-switches                 #  113.693 /sec                      
+                94      cpu-migrations                   #    0.200 /sec                      
+             2,109      page-faults                      #    4.485 /sec                      
+ 1,125,309,157,215      cycles                           #    2.393 GHz                         (87.50%)
+ 3,919,718,103,403      instructions                     #    3.48  insn per cycle              (87.49%)
+   336,081,768,061      branches                         #  714.650 M/sec                       (87.51%)
+        64,275,523      branch-misses                    #    0.02% of all branches             (87.48%)
+
+     120.024919429 seconds time elapsed
+
+     469.532454000 seconds user
+       0.696843000 seconds sys
+
+

@@ -1,0 +1,25 @@
+stress-ng: info:  [443458] setting to a 120 second (2 mins, 0.00 secs) run per stressor
+stress-ng: info:  [443458] dispatching hogs: 4 io
+stress-ng: info:  [443461] io: this is a legacy I/O sync stressor, consider using iomix instead
+stress-ng: metrc: [443458] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [443458]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [443458] io              2351873    120.00      4.87    186.30     19598.64       12302.31
+stress-ng: info:  [443458] successful run completed in 120.00s (2 mins, 0.00 secs)
+
+ Performance counter stats for 'stress-ng --io 4 --timeout 120s --metrics-brief':
+
+        187,781.03 msec task-clock                       #    1.564 CPUs utilized             
+        15,311,330      context-switches                 #   81.538 K/sec                     
+             2,382      cpu-migrations                   #   12.685 /sec                      
+             2,107      page-faults                      #   11.221 /sec                      
+   352,969,630,156      cycles                           #    1.880 GHz                         (87.82%)
+   318,699,528,552      instructions                     #    0.90  insn per cycle              (87.40%)
+    63,339,007,036      branches                         #  337.302 M/sec                       (87.41%)
+     1,161,542,421      branch-misses                    #    1.83% of all branches             (87.42%)
+
+     120.027918059 seconds time elapsed
+
+       4.887370000 seconds user
+     186.313227000 seconds sys
+
+

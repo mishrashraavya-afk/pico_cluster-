@@ -1,0 +1,24 @@
+stress-ng: info:  [487243] setting to a 120 second (2 mins, 0.00 secs) run per stressor
+stress-ng: info:  [487243] dispatching hogs: 4 cpu
+stress-ng: metrc: [487243] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [487243]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [487243] cpu               85755    120.02    469.55      0.57       714.48         182.41
+stress-ng: info:  [487243] successful run completed in 120.05s (2 mins, 0.05 secs)
+
+ Performance counter stats for 'stress-ng --cpu 4 --timeout 120s --metrics-brief':
+
+        470,192.25 msec task-clock                       #    3.916 CPUs utilized             
+            52,953      context-switches                 #  112.620 /sec                      
+                80      cpu-migrations                   #    0.170 /sec                      
+             2,570      page-faults                      #    5.466 /sec                      
+ 1,126,757,752,691      cycles                           #    2.396 GHz                         (87.52%)
+ 2,338,281,138,682      instructions                     #    2.08  insn per cycle              (87.49%)
+   400,924,848,561      branches                         #  852.683 M/sec                       (87.49%)
+     4,825,164,234      branch-misses                    #    1.20% of all branches             (87.51%)
+
+     120.072052919 seconds time elapsed
+
+     469.569548000 seconds user
+       0.579317000 seconds sys
+
+

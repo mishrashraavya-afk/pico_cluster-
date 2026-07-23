@@ -661,7 +661,7 @@ def run_npb(sched, kernel, trials=10, binary_name="", perf_mode="off"):
         print("\tperf not found on PATH — running NPB without perf.")
         perf_mode = "off"
 
-    base_cmd = [NPB_MPIRUN, "-np", str(nprocs), binary]
+    base_cmd = [NPB_MPIRUN, "--allow-run-as-root", "-np", str(nprocs), binary]
     fname = _ensure_output_path(f"{CSV_PATH}/npb.csv")
 
     for trial in range(1, trials + 1):
